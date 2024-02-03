@@ -59,3 +59,9 @@ header {
 	border: 3px solid blue;
 	border-radius: 10px;
 }
+
+#quote-container {
+	background-color: rgb(216, 216, 216);
+	display: flex;
+	flex-direction: column;
+}

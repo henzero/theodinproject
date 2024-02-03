@@ -27,9 +27,34 @@ const playerChoice = () => {
 };
 
 function playGame(playerChoice, computerChoice) {
-	for (let i = 0; i < playerChoice.length; i++) {
-		if (playerChoice[i] == computerChoice[i]) {
-			console.log(`${playerChoice[i]} vs ${computerChoice[i]}\n--It's a tie!--`);
+	let count;
+
+	if (playerChoice == choices[1] && computerChoice == choices[0]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+		++count;
+	} else if (playerChoice == choices[0] && computerChoice == choices[2]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+		++count;
+	} else if (playerChoice == choices[2] && computerChoice == choices[1]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+		++count;
+	} else if (playerChoice == choiceshoice[0] && computerChoice == choices[1]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
+		++count;
+	} else if (playerChoice == choices[1] && computerChoice == choices[2]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
+		++count;
+	} else if (playerChoice == choices[2] && computerChoice == choices[0]) {
+		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
+		++count;
+	} else {
+		for (let i = 0; i < playerChoice.length; i++) {
+			if (playerChoice == choices[i] && computerChoice == choices[i]) {
+				console.log(`${playerChoice} vs ${computerChoice}\n--It's a tie!--`);
+			}
 		}
 	}
+
+	console.log(`Score: ${count}`);
+	return count;
 }

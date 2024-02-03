@@ -26,7 +26,7 @@ const playerChoice = () => {
 	return player.charAt(0).toUpperCase + player.slice(1).toLowerCase;
 };
 
-function playGame(playerChoice, computerChoice) {
+function playround(playerChoice, computerChoice) {
 	let count;
 
 	if (playerChoice == choices[1] && computerChoice == choices[0]) {
@@ -55,6 +55,5 @@ function playGame(playerChoice, computerChoice) {
 		}
 	}
 
-	console.log(`Score: ${count}`);
 	return count;
 }

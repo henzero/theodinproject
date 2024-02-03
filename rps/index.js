@@ -14,3 +14,14 @@ const getComputerChoice = () => {
 
 	return computerChoice;
 };
+
+const getPlayerChoice = () => {
+	let player = prompt("Rock, Paper, or Scissors?");
+
+	while (!choices.toLowerCase.includes(player).toLowerCase) {
+		console.log("Invalid input!");
+		player = prompt("Rock, Paper, or Scissors?");
+	}
+
+	return player.charAt(0).toUpperCase + player.slice(1).toLowerCase;
+};

@@ -18,7 +18,7 @@ const computerChoice = () => {
 const playerChoice = () => {
 	let player = prompt("Rock, Paper, or Scissors?");
 
-	while (!choices.toLowerCase.includes(player).toLowerCase) {
+	while (!choices.map((choice) => choice.toLowerCase()).includes(player.toLowerCase())) {
 		console.log("Invalid input!");
 		player = prompt("Rock, Paper, or Scissors?");
 	}
@@ -26,31 +26,44 @@ const playerChoice = () => {
 	return player.charAt(0).toUpperCase + player.slice(1).toLowerCase;
 };
 
-function playRound(playerChoice, computerChoice) {
+function playRound(player, computer) {
 	let point;
 
-	if (playerChoice == choices[1] && computerChoice == choices[0]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+	if (player == choices[1] && computer == choices[0]) {
+		console.log(`${player} vs ${computer}\n${player} beats ${computer}\n--You win!--`);
 		++point;
-	} else if (playerChoice == choices[0] && computerChoice == choices[2]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+	} else if (player == choices[0] && computer == choices[2]) {
+		console.log(`${player} vs ${computer}\n${player} beats ${computer}\n--You win!--`);
 		++point;
-	} else if (playerChoice == choices[2] && computerChoice == choices[1]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
+	} else if (player == choices[2] && computer == choices[1]) {
+		console.log(`${player} vs ${computer}\n${player} beats ${computer}\n--You win!--`);
 		++point;
-	} else if (playerChoice == choiceshoice[0] && computerChoice == choices[1]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
-	} else if (playerChoice == choices[1] && computerChoice == choices[2]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
-	} else if (playerChoice == choices[2] && computerChoice == choices[0]) {
-		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
+	} else if (player == choices[0] && computer == choices[1]) {
+		console.log(`${player} vs ${computer}\n${computer} beats ${player}\n--You lose!--`);
+	} else if (player == choices[1] && computer == choices[2]) {
+		console.log(`${player} vs ${computer}\n${computer} beats ${player}\n--You lose!--`);
+	} else if (player == choices[2] && computer == choices[0]) {
+		console.log(`${player} vs ${computer}\n${computer} beats ${player}\n--You lose!--`);
 	} else {
-		for (let i = 0; i < playerChoice.length; i++) {
-			if (playerChoice == choices[i] && computerChoice == choices[i]) {
-				console.log(`${playerChoice} vs ${computerChoice}\n--It's a tie!--`);
+		while () {
+			
+		}
+		for (let i = 0; i < player.length; i++) {
+			if (player == choices[i] && computer == choices[i]) {
+				console.log(`${player} vs ${computer}\n--It's a tie!--`);
 			}
 		}
 	}
 
 	return point;
+}
+
+function playGame() {
+	let score = 0;
+
+	for (let i = 0; i < 5; i++) {
+		score += playRound(playerChoice(), computerChoice());
+	}
+
+	console.log("Score: ", score);
 }

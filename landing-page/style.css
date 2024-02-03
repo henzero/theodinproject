@@ -92,12 +92,21 @@ a:visited,
 	align-items: center;
 }
 
+#main-content h2 {
+	font-size: 36px;
+	font-weight: 950;
+	color: #1f2937;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
 #info-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 45px;
+	gap: 50px;
+	margin-bottom: 130px;
 }
 
 .info {
@@ -106,14 +115,15 @@ a:visited,
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 140px;
+	width: 170px;
 	height: auto;
+	color: #3f4246;
 }
 
 .box {
-	width: 130px;
-	height: 130px;
-	border: 3px solid blue;
+	width: 170px;
+	height: 170px;
+	border: 3px solid #3882f6;
 	border-radius: 10px;
 }
 

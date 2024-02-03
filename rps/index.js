@@ -1,6 +1,6 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
-const getComputerChoice = () => {
+const computerChoice = () => {
 	const random = Math.floor(Math.random() * 3);
 	let computerChoice;
 
@@ -15,7 +15,7 @@ const getComputerChoice = () => {
 	return computerChoice;
 };
 
-const getPlayerChoice = () => {
+const playerChoice = () => {
 	let player = prompt("Rock, Paper, or Scissors?");
 
 	while (!choices.toLowerCase.includes(player).toLowerCase) {
@@ -25,3 +25,11 @@ const getPlayerChoice = () => {
 
 	return player.charAt(0).toUpperCase + player.slice(1).toLowerCase;
 };
+
+function playGame(playerChoice, computerChoice) {
+	for (let i = 0; i < playerChoice.length; i++) {
+		if (playerChoice[i] == computerChoice[i]) {
+			console.log(`${playerChoice[i]} vs ${computerChoice[i]}\n--It's a tie!--`);
+		}
+	}
+}

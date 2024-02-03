@@ -26,18 +26,18 @@ const playerChoice = () => {
 	return player.charAt(0).toUpperCase + player.slice(1).toLowerCase;
 };
 
-function playround(playerChoice, computerChoice) {
-	let count;
+function playRound(playerChoice, computerChoice) {
+	let point;
 
 	if (playerChoice == choices[1] && computerChoice == choices[0]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
-		++count;
+		++point;
 	} else if (playerChoice == choices[0] && computerChoice == choices[2]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
-		++count;
+		++point;
 	} else if (playerChoice == choices[2] && computerChoice == choices[1]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${playerChoice} beats ${computerChoice}\n--You win!--`);
-		++count;
+		++point;
 	} else if (playerChoice == choiceshoice[0] && computerChoice == choices[1]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
 	} else if (playerChoice == choices[1] && computerChoice == choices[2]) {
@@ -52,5 +52,5 @@ function playround(playerChoice, computerChoice) {
 		}
 	}
 
-	return count;
+	return point;
 }

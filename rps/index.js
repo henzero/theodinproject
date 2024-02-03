@@ -1,6 +1,6 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
-function getComputerChoice() {
+const getComputerChoice = () => {
 	const random = Math.floor(Math.random() * 3);
 	let computerChoice;
 
@@ -13,4 +13,4 @@ function getComputerChoice() {
 	}
 
 	return computerChoice;
-}
+};

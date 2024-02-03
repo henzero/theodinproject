@@ -40,13 +40,10 @@ function playround(playerChoice, computerChoice) {
 		++count;
 	} else if (playerChoice == choiceshoice[0] && computerChoice == choices[1]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
-		++count;
 	} else if (playerChoice == choices[1] && computerChoice == choices[2]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
-		++count;
 	} else if (playerChoice == choices[2] && computerChoice == choices[0]) {
 		console.log(`${playerChoice} vs ${computerChoice}\n${computerChoice} beats ${playerChoice}\n--You lose!--`);
-		++count;
 	} else {
 		for (let i = 0; i < playerChoice.length; i++) {
 			if (playerChoice == choices[i] && computerChoice == choices[i]) {

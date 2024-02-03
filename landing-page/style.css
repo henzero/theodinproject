@@ -77,3 +77,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 }
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}

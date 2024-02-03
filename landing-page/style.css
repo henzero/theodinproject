@@ -65,3 +65,15 @@ header {
 	display: flex;
 	flex-direction: column;
 }
+
+#action {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#action-container {
+	background-color: rgb(96, 171, 241);
+	display: flex;
+	justify-content: space-between;
+}
